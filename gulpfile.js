@@ -63,14 +63,6 @@ gulp.task('useref', function() {
         .pipe(gulp.dest('dist'))
 });
 
-//move fonts to dist folder
-gulp.task('fonts', function() {
-    return gulp.src('_ui/fonts/**/*')
-        .pipe(plumber({errorHandler: onError}))
-        .pipe(gulp.dest('dist/fonts'))
-
-});
-
 //cleaners
 gulp.task('clean:dist', function() {
   return del.sync('dist');
@@ -86,7 +78,7 @@ gulp.task('pretty', function (callback) {
 //minify and creating dist folder
 gulp.task('build', function (callback) {
   runSequence('clean:dist', 'sass',
-    ['useref', 'fonts'],
+    'useref',
     callback
   )
 });
