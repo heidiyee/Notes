@@ -1,0 +1,6 @@
+$max-width: 1000px;
+
+//used mostly on divs to be the outer container of the section
+.container {
+    @include outer-container;
+}

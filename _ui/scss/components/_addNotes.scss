@@ -1,0 +1,22 @@
+.add-notes {
+    .container {
+        height: 1.8em;
+        line-height: 1.8em;
+
+        input {
+            @include span-columns(8);
+            @include shift(1);
+            height: 100%;
+        }
+        .add {
+            display: inline-block;
+            @include span-columns(2);
+            height: 100%;
+            background-color: $light-blue;
+
+            p {
+                vertical-align: middle;
+            }
+        }
+    }
+}
