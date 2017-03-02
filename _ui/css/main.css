@@ -67,6 +67,10 @@ h1 {
   font-size: 2.4em;
   margin: 1.0em auto; }
 
+a {
+  text-decoration: none;
+  color: #fff; }
+
 .add-notes .container {
   height: 1.8em;
   line-height: 1.8em; }
