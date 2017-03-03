@@ -1,0 +1,65 @@
+.list-of-notes {
+    margin-top: 3.6em;
+    .container {
+        text-align: left;
+        ul {
+            @include span-columns(10);
+            @include shift(1);
+
+            .note-entry {
+                position: relative;
+                padding: 14px;
+                border-bottom: 1px dotted #000;
+                font-size: $font-default-size;
+                overflow: auto;
+
+                p {
+                    @include span-columns(7);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .edit {
+                    float: right;
+                    margin-right: 10px;
+                }
+
+                .delete {
+                    float: right;
+                }
+
+                .edit-notes {
+                    position: relative;
+                    display: none;
+                    width: 100%;
+                    max-height: 0;
+
+                    input {
+                        position: absolute;
+                        top: -26px;
+                        @include span-columns(7);
+                        padding: 10px;
+                        font-size: $font-default-size;
+                    }
+                    .note-text {
+                        width: 100%;
+                        margin: 20px 0 15px;
+                        font-size: $font-default-size;
+                    }
+                    .save , .cancel {
+                        display: inline-block;
+                        padding-bottom: 10px;
+                        text-align: center;
+                        @include span-columns(4);
+                        @include shift(1);
+                    }
+
+                    &.show {
+                        display: inline-block;
+                        max-height: 500px;
+                    }
+                }
+            }
+        }
+    }
+}

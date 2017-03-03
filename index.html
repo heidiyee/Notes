@@ -14,12 +14,29 @@
         <section class="add-notes">
             <div class="container">
                 <input id="title" type="text" name="title" placeholder="title">
-                <a href="/edit.html" class="add"><p>Add</p></a>
+                <p id="add" class="button">Add</p>
             </div>
         </section>
         <section class="list-of-notes">
             <div class="container">
-
+                <ul id="list">
+                    <li class="note-entry">
+                        <p class="title">title 1</p>
+                        <div class="button delete">Delete</div>
+                        <div class="button edit">Edit</div>
+                        <div class="edit-notes">
+                            <input class="note-title" type="text" name="editTitle" value="">
+                            <textarea class="note-textarea" name="name" rows="7" class="note-text"></textarea>
+                            <div class="button cancel">Cancel</div>
+                            <div class="button save">Save</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="clear-all">
+            <div class="container">
+                <p id="clear" class="button">Clear All</p>
             </div>
         </section>
         <footer>
@@ -32,6 +49,4 @@
         <script src="_ui/js/localStorage.js"></script>
         <!-- endbuild -->
     </body>
-
-
 </html>

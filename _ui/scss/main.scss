@@ -9,6 +9,9 @@
 //base
 @import "base/reset";
 @import "base/typography";
+@import "base/global";
 
 //components
 @import "components/addNotes";
+@import "components/listofnotes";
+@import "components/clear";
