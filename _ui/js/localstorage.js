@@ -10,6 +10,7 @@ function checkForLocalStorage(){
 //adds note if add button is clicked
 var addNotesClicked = function() {
     $('#add').click(function(e) {
+        e.preventDefault();
         var title = $('#title').val();
         var noteCount = getNoteCount();
         if (title == '') {
@@ -24,6 +25,7 @@ var addNotesClicked = function() {
 //clears localstorage and list of all items
 var clearAllNotes = function() {
     $('#clear').click(function(e) {
+        e.preventDefault();
         checkForLocalStorage();
         localStorage.clear();
         $('#list').empty();
@@ -118,6 +120,14 @@ function setNoteInputs(noteId, editPanel) {
     noteArray = JSON.parse(noteInfo);
     editPanel.children('.note-edit-title').val(noteArray[0]);
     editPanel.children('.note-edit-text').val(noteArray[1]);
+    if (!noteArray[2]) {
+        editPanel.parent().removeClass();
+        editPanel.children('input[name=color]').attr('checked','false');
+    } else {
+        editPanel.parent().removeClass();
+        editPanel.parent().addClass(noteArray[2]);
+        editPanel.children($('input[name=color][value=' + noteArray[2] + ']')).prop('checked', true);
+    }
 }
 
 function displayNotes() {

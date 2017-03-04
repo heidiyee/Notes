@@ -3,8 +3,12 @@
 
     .container {
         #clear {
+            @include span-columns(4);
+            @include shift(4);
             background-color: $clear-all-color;
-            padding: 1.2em 1.6em;
+            padding: 10px;
+            color: $white;
+            font-size: $font-default-size;
         }
     }
 }

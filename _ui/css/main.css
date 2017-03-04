@@ -105,7 +105,9 @@ input, textarea {
     margin-right: 2.35765%;
     width: 14.70196%;
     height: 100%;
-    font-size: 16px; }
+    font-size: 16px;
+    cursor: pointer;
+    border: none; }
     .add-notes .container #add:last-child {
       margin-right: 0; }
     .add-notes .container #add p {
@@ -150,7 +152,7 @@ input, textarea {
           max-height: 0; }
           .list-of-notes .container ul li .edit-notes .note-edit-title {
             position: absolute;
-            top: -28px;
+            top: -20px;
             float: left;
             display: block;
             margin-right: 2.35765%;
@@ -161,7 +163,7 @@ input, textarea {
               margin-right: 0; }
           .list-of-notes .container ul li .edit-notes .note-edit-text {
             width: 100%;
-            margin: 10px 0 15px;
+            margin: 20px 0 15px;
             font-size: 16px; }
           .list-of-notes .container ul li .edit-notes .save, .list-of-notes .container ul li .edit-notes .cancel {
             display: inline-block;
@@ -213,5 +215,14 @@ input, textarea {
 .clear-all {
   margin-top: 5.0em; }
   .clear-all .container #clear {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 34.11922%;
     background-color: #EB008B;
-    padding: 1.2em 1.6em; }
+    padding: 10px;
+    color: #fff;
+    font-size: 16px; }
+    .clear-all .container #clear:last-child {
+      margin-right: 0; }

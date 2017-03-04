@@ -36,14 +36,14 @@
 
                     .note-edit-title {
                         position: absolute;
-                        top: -28px;
+                        top: -20px;
                         @include span-columns(7);
                         padding: 9px;
                         font-size: $font-default-size;
                     }
                     .note-edit-text {
                         width: 100%;
-                        margin: 10px 0 15px;
+                        margin: 20px 0 15px;
                         font-size: $font-default-size;
                     }
                     .save , .cancel {

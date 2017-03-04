@@ -16,6 +16,8 @@
             @include span-columns(2);
             height: 100%;
             font-size: $font-default-size;
+            cursor: pointer;
+            border: none;
 
             p {
                 vertical-align: middle;
