@@ -80,6 +80,9 @@ a {
 .button {
   cursor: pointer; }
 
+input, textarea {
+  border: 1px solid #D3D3D3; }
+
 .add-notes .container {
   height: 3.6em;
   line-height: 3.6em; }
@@ -101,7 +104,8 @@ a {
     display: block;
     margin-right: 2.35765%;
     width: 14.70196%;
-    height: 100%; }
+    height: 100%;
+    font-size: 16px; }
     .add-notes .container #add:last-child {
       margin-right: 0; }
     .add-notes .container #add p {
@@ -119,60 +123,92 @@ a {
       margin-left: 8.5298%; }
       .list-of-notes .container ul:last-child {
         margin-right: 0; }
-      .list-of-notes .container ul .note-entry {
+      .list-of-notes .container ul li {
         position: relative;
         padding: 14px;
         border-bottom: 1px dotted #000;
         font-size: 16px;
         overflow: auto; }
-        .list-of-notes .container ul .note-entry p {
+        .list-of-notes .container ul li p {
           float: left;
           display: block;
           margin-right: 2.35765%;
           width: 57.35098%;
           overflow: hidden;
           text-overflow: ellipsis; }
-          .list-of-notes .container ul .note-entry p:last-child {
+          .list-of-notes .container ul li p:last-child {
             margin-right: 0; }
-        .list-of-notes .container ul .note-entry .edit {
+        .list-of-notes .container ul li .edit {
           float: right;
           margin-right: 10px; }
-        .list-of-notes .container ul .note-entry .delete {
+        .list-of-notes .container ul li .delete {
           float: right; }
-        .list-of-notes .container ul .note-entry .edit-notes {
+        .list-of-notes .container ul li .edit-notes {
           position: relative;
           display: none;
           width: 100%;
           max-height: 0; }
-          .list-of-notes .container ul .note-entry .edit-notes input {
+          .list-of-notes .container ul li .edit-notes .note-edit-title {
             position: absolute;
-            top: -26px;
+            top: -28px;
             float: left;
             display: block;
             margin-right: 2.35765%;
             width: 57.35098%;
-            padding: 10px;
+            padding: 9px;
             font-size: 16px; }
-            .list-of-notes .container ul .note-entry .edit-notes input:last-child {
+            .list-of-notes .container ul li .edit-notes .note-edit-title:last-child {
               margin-right: 0; }
-          .list-of-notes .container ul .note-entry .edit-notes .note-text {
+          .list-of-notes .container ul li .edit-notes .note-edit-text {
             width: 100%;
-            margin: 20px 0 15px;
+            margin: 10px 0 15px;
             font-size: 16px; }
-          .list-of-notes .container ul .note-entry .edit-notes .save, .list-of-notes .container ul .note-entry .edit-notes .cancel {
+          .list-of-notes .container ul li .edit-notes .save, .list-of-notes .container ul li .edit-notes .cancel {
             display: inline-block;
             padding-bottom: 10px;
             text-align: center;
-            float: left;
-            display: block;
-            margin-right: 2.35765%;
-            width: 31.76157%;
-            margin-left: 8.5298%; }
-            .list-of-notes .container ul .note-entry .edit-notes .save:last-child, .list-of-notes .container ul .note-entry .edit-notes .cancel:last-child {
-              margin-right: 0; }
-          .list-of-notes .container ul .note-entry .edit-notes.show {
+            float: right; }
+          .list-of-notes .container ul li .edit-notes .save {
+            margin-right: 10px; }
+          .list-of-notes .container ul li .edit-notes .colors {
+            display: inline;
+            width: 102px;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #D3D3D3; }
+            .list-of-notes .container ul li .edit-notes .colors .color {
+              display: inline-block;
+              margin-right: 10px;
+              vertical-align: middle;
+              cursor: pointer;
+              position: relative;
+              width: 20px;
+              height: 20px; }
+              .list-of-notes .container ul li .edit-notes .colors .color:last-child {
+                margin-right: 0; }
+              .list-of-notes .container ul li .edit-notes .colors .color::after {
+                position: absolute;
+                content: "";
+                width: 20px;
+                height: 20px;
+                top: -2px;
+                left: -1px; }
+            .list-of-notes .container ul li .edit-notes .colors #pink::after {
+              background-color: #ffaaa5; }
+            .list-of-notes .container ul li .edit-notes .colors #seafoam::after {
+              background-color: #a8e6cf; }
+            .list-of-notes .container ul li .edit-notes .colors #light-green::after {
+              background-color: #dcedc1; }
+          .list-of-notes .container ul li .edit-notes.show {
             display: inline-block;
+            padding-top: 10px;
             max-height: 500px; }
+        .list-of-notes .container ul li.pink {
+          background-color: #ffaaa5; }
+        .list-of-notes .container ul li.seafoam {
+          background-color: #a8e6cf; }
+        .list-of-notes .container ul li.light-green {
+          background-color: #dcedc1; }
 
 .clear-all {
   margin-top: 5.0em; }
